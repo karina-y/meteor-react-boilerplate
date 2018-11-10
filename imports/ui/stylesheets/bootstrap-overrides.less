@@ -1,0 +1,74 @@
+@import "variables.less";
+
+html {
+  body {
+    .nav-pills > li.active {
+      & > a {
+        color: @brand-white;
+        background-color: @TODOBOILER_themeColorDark;
+
+        &:hover, &:focus {
+          color: @brand-white;
+          background-color: @TODOBOILER_themeColorDark;
+        }
+      }
+    }
+
+    //background color of the dropdown nav menus (learn more and company/candidate)
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+      background-color: @brand-white-gray;
+      color: @TODOBOILER_themeColor;
+    }
+
+    .pagination {
+      & > li > a, .pagination > li > span {
+        color: @TODOBOILER_themeColorDark;
+
+        &:hover, &:focus {
+          color: @TODOBOILER_themeColorDark;
+        }
+      }
+
+      & > .active > a {
+        background-color: @TODOBOILER_themeColorDark;
+        border-color: @TODOBOILER_themeColorDark;
+      }
+    }
+
+    label.lighter {
+        font-weight: 500;
+    }
+
+    .alert-warning {
+      color: @brand-gray-med;
+      background-color: @brand-gray-light;
+      border-color: @brand-gray-light-med;
+    }
+
+    .btn-override {
+      padding: 0;
+      background-color: unset;
+      color: inherit;
+      font-size: inherit;
+      border: unset;
+      line-height: inherit;
+
+      &:hover, &:active, &:focus, &::selection {
+        background-color: unset;
+        border: unset;
+        color: inherit;
+      }
+    }
+
+    .page-header {
+      margin-top: 0;
+    }
+
+    @media @breakpoint-sm {
+      .page-header {
+        margin-top: 20px;
+      }
+    }
+
+  }
+}

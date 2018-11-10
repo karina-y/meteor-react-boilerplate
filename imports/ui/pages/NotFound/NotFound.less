@@ -1,0 +1,66 @@
+@import '../../stylesheets/variables.less';
+
+div.not-found-container {
+  background-color: @brand-gray-light;
+  width: 100%;
+  margin-bottom: 0 !important;
+  //min-height: @screen-height;
+
+  div.NotFound {
+    display: block;
+    position: relative;
+    color: @brand-error;
+    font-size: @font-lg;
+    text-align: center;
+    font-family: monospace;
+    margin-top: 15vh;
+    margin-bottom: 0 !important;
+
+    & > .row {
+      padding: 10% 0;
+    }
+
+    .text-container {
+
+    }
+
+    .image-container {
+
+      & > img {
+        width: 55%
+      }
+    }
+  }
+
+  @media @breakpoint-xs {
+    div.NotFound {
+      font-size: @font-md;
+      margin-top: 10vh;
+
+      .text-container {
+
+      }
+
+      .image-container {
+        & > img {
+          width: 33%;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  @media @breakpoint-sm {
+
+    div.NotFound {
+
+      .text-container {
+        float: left;
+      }
+
+      .image-container {
+        float: right;
+      }
+    }
+  }
+}

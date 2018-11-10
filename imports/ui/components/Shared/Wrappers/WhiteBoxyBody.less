@@ -1,0 +1,117 @@
+@import "../../../stylesheets/variables.less";
+
+html {
+
+  & > body {
+
+    div.white-box-body {
+      //font-family: "Gotham SSm", sans-serif;
+      //font-weight: lighter;
+      background-color: @brand-white-gray;
+      padding-bottom: 70px;
+      //min-height: @screen-height;
+      color: @brand-gray-med;   //#505050
+
+      &.compensate-single-nav {
+        padding-top: 100px;
+      }
+
+      &.compensate-dual-nav {
+        padding-top: 140px;
+      }
+
+      & > .container {
+        background-color: @brand-white;
+        border-radius: 2px;
+        border: 1px solid @brand-white-gray;    //#efefef
+        //padding: 0 60px;
+        padding: 30px 60px;
+
+        &.white-box-body-lg {
+          width: 75%;
+        }
+
+        &.white-box-body-md {
+          width: 60%;
+        }
+
+        &.white-box-body-sm {
+          width: 45%;
+        }
+
+        .control-label {
+          padding-top: 5px;
+        }
+
+      }
+
+      .white-box-title {
+        text-align: center;
+        width: 100%;
+        //font-size: 1.6em;
+      }
+
+      .white-box-tagline {
+        text-align:center;
+        width: 100%;
+        //font-size: .9em;
+      }
+
+      .white-box-buttons {
+        text-align:right;
+      }
+
+    }
+
+    @media @breakpoint-xs {
+      div.white-box-body {
+
+        & > .container {
+          padding: 10px 20px;
+
+          &.white-box-body-lg, &.white-box-body-md, &.white-box-body-sm {
+            width: 95%;
+          }
+        }
+
+        //at xs everything gets put into the hamburger menu
+        &.compensate-dual-nav {
+          padding-top: 90px;
+        }
+      }
+    }
+
+    @media @breakpoint-sm {
+      div.white-box-body {
+        & > .container {
+          &.white-box-body-lg, &.white-box-body-md, &.white-box-body-sm {
+            width: 85%;
+          }
+        }
+      }
+    }
+
+    @media @breakpoint-lg {
+
+      div.white-box-body {
+        & > .container {
+
+          &.white-box-body-lg {
+            width: 75%;
+          }
+
+          &.white-box-body-md {
+            width: 60%;
+          }
+
+          &.white-box-body-sm {
+            width: 45%;
+          }
+
+        }
+      }
+    }
+
+
+  }
+}
